@@ -11,10 +11,10 @@ describe "Static pages" do
       page.should have_selector('h1', :text => 'Sewt App')
     end
 
-    it "should have the base title 'Ruby on Rails Tutorial Sewt App'" do
+    it "should have the title 'Home'" do
       visit '/static_pages/home'
       page.should have_selector('title',
-                        :text => base_title.to_s)
+                        :text => base_title.to_s + " | Home")
     end
 
     it "should not have a custom page title" do
